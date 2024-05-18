@@ -32,5 +32,5 @@ def zip_file():
             zf.write(add_file, os.path.basename(add_file))
 
     yield
-
+    zf.close()
     os.remove(os.path.join(RESOURCE_DIR, "zip.zip"))
