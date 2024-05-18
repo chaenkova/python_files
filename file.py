@@ -18,10 +18,10 @@ download_file("https://github.com/qa-guru/qa_guru_python_9_7_files/raw/master/tm
 #time.sleep(4)
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-if not os.path.exists("recources"):
-    os.mkdir("recources")
+if not os.path.exists("resources"):
+    os.mkdir("resources")
 
-RESOURCE_DIR = os.path.join(CURRENT_DIR, "recources")
+RESOURCE_DIR = os.path.join(CURRENT_DIR, "resources")
 
 with zipfile.ZipFile(os.path.join(RESOURCE_DIR, "zip.zip"), 'w') as zf:
     for file in ['xlsx.xlsx', 'pdf.pdf', 'csv.csv']:
