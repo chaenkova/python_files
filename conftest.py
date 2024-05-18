@@ -3,6 +3,7 @@ import time
 import requests
 import zipfile
 import pytest
+import shutil
 
 
 def download_file(url, filename):
@@ -33,4 +34,4 @@ def zip_file():
 
     yield
     zf.close()
-    os.remove(os.path.join(RESOURCE_DIR, "zip.zip"))
+    shutil.rmtree(RESOURCE_DIR)
